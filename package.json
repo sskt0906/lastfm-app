@@ -1,0 +1,23 @@
+{
+  "name": "lastfm-server",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js",
+    "db:push": "prisma db push",
+    "seed": "node prisma/seed.js",
+    "db:seed": "prisma db seed"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.16.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.16.1"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}

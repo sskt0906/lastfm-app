@@ -1,0 +1,43 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: lastfm
+      MYSQL_USER: app
+      MYSQL_PASSWORD: apppass
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test:
+        [
+          'CMD-SHELL',
+          'mysqladmin ping -h localhost -p$${MYSQL_ROOT_PASSWORD} --silent',
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - dbdata:/var/lib/mysql # ← この名前付きボリュームを下で定義
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    env_file: ./server/.env
+    working_dir: /app # ← これを追加
+    ports:
+      - '5174:5174'
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./public:/app/public:ro
+    command: sh -lc "
+      npm run db:generate &&
+      npm run db:push &&
+      npm run db:seed &&
+      node index.js "
+volumes:
+  dbdata: {} # ← トップレベルで定義（インデントに注意）

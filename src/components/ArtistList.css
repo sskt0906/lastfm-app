@@ -1,0 +1,52 @@
+.artist-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 32px 0;
+}
+.artist-card {
+  background: linear-gradient(140deg, #e7f5ff 60%, #cce7ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(41, 152, 255, 0.13);
+  padding: 24px 16px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.artist-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 28px rgba(41, 152, 255, 0.18);
+}
+.artist-image {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2998ff;
+  margin-bottom: 10px;
+}
+.artist-name {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1762a7;
+  margin: 0;
+}
+.artist-listeners {
+  font-size: 0.95rem;
+  color: #488fc5;
+  margin-bottom: 8px;
+}
+.artist-link {
+  color: #2998ff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 6px;
+  transition: color 0.2s;
+}
+.artist-link:hover {
+  color: #1762a7;
+  text-decoration: underline;
+}

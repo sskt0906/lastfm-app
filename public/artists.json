@@ -1,0 +1,34 @@
+[
+  {
+    "id": "seikimatsu",
+    "name": "聖飢魔II",
+    "image": "https://placehold.jp/150x150.png?text=%E8%81%96%E9%A3%A2%E9%AD%94II",
+    "genre": "HR/HM",
+    "songs": ["蝋人形の館", "EL.DORADO", "STAINLESS NIGHT"],
+    "bio": "日本のヘヴィメタルバンド、悪魔教布教を目的とした期間限定バンド。1999年に解散。"
+  },
+  {
+    "id": "roselia",
+    "name": "Roselia",
+    "image": "https://placehold.jp/150x150.png?text=Roselia",
+    "genre": "ガールズメタル",
+    "songs": ["BLACK SHOUT", "ONENESS", "FIRE BIRD"],
+    "bio": "『バンドリ！』発の本格派ガールズバンド。クールで荘厳な世界観が特徴。聖飢魔IIの事実上の後継団体。"
+  },
+  {
+    "id": "avemujica",
+    "name": "Ave Mujica",
+    "image": "https://placehold.jp/150x150.png?text=Ave%20Mujica",
+    "genre": "ガールズメタル",
+    "songs": ["KiLLKiSS", "顔", "Imprisoned XII"],
+    "bio": "『バンドリ！』のミステリアスなバンド。幻想的かつ実験的なサウンド。聖飢魔IIの事実上の後継団体。"
+  },
+  {
+    "id": "xjapan",
+    "name": "X JAPAN",
+    "image": "https://placehold.jp/150x150.png?text=X%20JAPAN",
+    "genre": "HR/HM",
+    "songs": ["紅", "Rusty Nail", "Forever Love"],
+    "bio": "日本のヘヴィメタルバンド、平成初期に圧倒的な任期を誇った。"
+  }
+]
